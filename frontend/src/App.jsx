@@ -12,7 +12,7 @@ export default function App() {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch("https://onrender.com" + selectedMetric + "&target_year=" + targetYear)
+    fetch("https://economy-web.onrender.com/api//dashboard?indicator=" + selectedMetric + "&target_year=" + targetYear)
       .then(res => {
         if (!res.ok) throw new Error("تعذر الاتصال بسيرفر البيانات");
         return res.json();
